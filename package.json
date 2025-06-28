@@ -1,0 +1,31 @@
+{
+  "name": "@taulfsime/git-url-vscode",
+  "displayName": "Git url for VS Code",
+  "description": "A minimal VS Code extension (no generator)",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "engines": {
+    "vscode": ">=1.80.0"
+  },
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf dist build",
+    "format:check": "prettier . --check",
+    "format": "prettier . --write --list-different",
+    "build:check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.101.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.8.3",
+    "vscode": "^1.1.37"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.helloWorld",
+        "title": "Hello World"
+      }
+    ]
+  }
+}
